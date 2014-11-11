@@ -34,7 +34,7 @@ gj.create({
 The GeoJSON features may be queried using method `each`:
 
 ```javascript
-gj.each('LineString', function(feature, geometry) {
+gj.each('LineString', null, function(feature, geometry) {
     // do something
     return true;                     
 });
@@ -52,6 +52,8 @@ gj.each('LineString', { x: 5, y: 5, w: 10, h: 10 }, function(feature, geometry) 
 });
 ```
 
+### Browsing through all points and line segments
+
 For convenient browsing of all points and all line segments, there are methods `eachPoint` and `eachLine`:
 
 ```javascript
@@ -67,6 +69,8 @@ gj.eachLine({ x: 5, y: 5, w: 10, h: 10 }, function(feature, p1, p2) {
 ```
 
 Please note that when using `eachPoint` and `eachLine`, they browse through all points and line segments regardless of their geometry type. Each coordinate pair found in the GeoJSON features will be browsed through with `eachPoint`, and each line segment in any `LineString`, `MultiLineString`, `Polygon`, or `MultiPolygon` will be browsed through when using `eachLine`. This also means that each feature may be reported multiple times to this callback.
+
+Please note also that each feature is included in the quadtree by their bounding box. These methods return all points and line segments in features whose bounding box overlaps the queried area. Therefore there may well be points and lines returned that are actually outside of that area.
 
 ### Serializing and deserializing
 

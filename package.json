@@ -1,15 +1,14 @@
 {
   "name": "geojson-qt",
   "version": "0.0.1",
-  "private": true,
   "description": "utilities for storing and handling geojson geometry in a quadtree",
   "main": "lib/geojson.js",
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.org/asaarinen/geojson-qt.git"
+    "url": "https://github.com/asaarinen/geojson-qt.git"
   },
-  "author": "Antti Saarinen",
-  "license": "Copyrigh (c) Antti Saarinen 2014- All rights reserved.",
+  "author": "Antti Saarinen <antti.p.saarinen@gmail.com>",
+  "license": "MIT",
   "readmeFilename": "README.md",
   "dependencies": {
     "simple-quadtree": "~0.1.2"
