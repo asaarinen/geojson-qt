@@ -1,6 +1,6 @@
 {
   "name": "geojson-qt",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "utilities for storing and handling geojson geometry in a quadtree",
   "main": "lib/geojson.js",
   "repository": {
@@ -11,6 +11,6 @@
   "license": "MIT",
   "readmeFilename": "README.md",
   "dependencies": {
-    "simple-quadtree": "~0.1.2"
+    "simple-quadtree": "^0.1.2"
   }
 }
